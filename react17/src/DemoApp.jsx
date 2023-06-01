@@ -25,11 +25,12 @@ export default class DemoApp extends React.Component {
               center: 'title',
               right: 'dayGridMonth,timeGridWeek,timeGridDay'
             }}
-            initialView='dayGridMonth'
+            initialView='timeGridWeek'
             editable={true}
             selectable={true}
             selectMirror={true}
-            dayMaxEvents={true}
+            dayMaxEventRows ={3}
+            eventMaxStack= {2}
             weekends={this.state.weekendsVisible}
             initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
             select={this.handleDateSelect}
